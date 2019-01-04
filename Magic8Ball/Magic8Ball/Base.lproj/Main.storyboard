@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic8Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZnM-Zj-BgV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.90196078430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-Cz-76t">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="BbP-0I-JLh"/>
+                                    <constraint firstAttribute="width" constant="300" id="olp-y2-h1A"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnK-as-8xS">
+                                <rect key="frame" x="48" y="87" width="279.5" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="DV7-yH-lUM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jux-nU-pWa">
+                                <rect key="frame" x="0.0" y="577" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xhB-XE-gaE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <state key="normal" title="Ask"/>
+                                <connections>
+                                    <action selector="askButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4JJ-jn-etH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zzO-Cz-76t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1N2-rf-yPd"/>
+                            <constraint firstAttribute="trailing" secondItem="jux-nU-pWa" secondAttribute="trailing" id="6SR-Ek-Ncx"/>
+                            <constraint firstItem="OnK-as-8xS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="67" id="FCH-Ij-Jd8"/>
+                            <constraint firstItem="zzO-Cz-76t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qeq-Lt-ejJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jux-nU-pWa" secondAttribute="trailing" id="bub-1Q-y29"/>
+                            <constraint firstItem="jux-nU-pWa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e8w-Rc-c5Z"/>
+                            <constraint firstItem="ZnM-Zj-BgV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eES-5s-jFJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZnM-Zj-BgV" secondAttribute="trailing" id="gYi-oq-lSE"/>
+                            <constraint firstAttribute="bottom" secondItem="ZnM-Zj-BgV" secondAttribute="bottom" id="h0y-St-Epy"/>
+                            <constraint firstItem="ZnM-Zj-BgV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="liP-VL-cqt"/>
+                            <constraint firstItem="OnK-as-8xS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="trd-js-N1e"/>
+                            <constraint firstAttribute="bottom" secondItem="jux-nU-pWa" secondAttribute="bottom" constant="40" id="zRK-1z-Bjc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerImage" destination="zzO-Cz-76t" id="ldj-NI-UJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-82.400000000000006" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball1" width="457.5" height="410.5"/>
+    </resources>
+</document>
